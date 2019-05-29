@@ -24,10 +24,14 @@ public class WhatToEat {
 			mealSuggestion = "fried chicken";
 		} else if (eventType.equalsIgnoreCase("formal")) {
 			mealSuggestion = "chicken parmesan";
+		} else {
+			System.out.println("Please enter a valid event type");
+			return;
 		}
 
 		if (partySize <= 0) {
 			System.out.println("Please enter a valid number for party size");
+			return;
 		} else if (partySize == 1) {
 			prepSuggestion = "in the microwave";
 		} else if (partySize <= 12) {
